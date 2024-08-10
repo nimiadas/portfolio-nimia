@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/photo.jpeg" alt="profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Nimia Das A</h1>
+        <p class="section__text__p2">Student | Web Developer | Designer | Learning Enthusiast</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/nimiadas/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/nimiadas'" />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              I am a final year Electronics and Communication Engineering student at NSS College of Engineering, Interested in signal processing, image processing, circuit design, and machine learning. I have hands-on experience with various programming languages like Python and circuit simulation softwares like Proteus and LTSpice. In addition to my academic pursuits, I am also an enthusiast in web development and designing., creating interactive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I also enjoy working in communities. I had held multiple leadership and technical positions across different communities. As a passionate learner, I enjoy coding, exploring new technologies, and sharing knowledge with my peers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="skill">
+        <p>Python</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>UX Designing</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 45%;"></div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <h2>Smart Bus System</h2>
+            </div>
+            <div class="project-card-back">
+              <p>A conductorless bus system uses RFID cards for fare deduction, calculates and displays stop times based on passenger destination data from sensors, and provides passenger count information to both driver and passengers.</p>
+              <button class="btn btn-color-1" onclick="window.open('./assets/project.pdf')">Know more</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <h2>Spam Link Detector</h2>
+            </div>
+            <div class="project-card-back">
+              <p>Developed a spam link detector as a part of Kerala’s first women only hackathon. The spam link detector can detect any link and give an alert message if it's a spam.</p>
+              <button class="btn btn-color-1" onclick="location.href='https://github.com/nimiadas/Argus_tink-her-hack'">GitHub</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <h2>Scream Detector using Machine Learning</h2>
+            </div>
+            <div class="project-card-back">
+              <p>A live project which includes a real-time desktop app using Python and Kivy to detect human screams with Machine Learning and Deep Learning, sending automatic alerts to the police with the user's location in emergencies.</p>
+              <button class="btn btn-color-1" onclick="alert('This feature is yet to come')">GitHub</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <div class="contact-text">
+            <p class="contact-info-title">Email</p>
+            <p><a href="mailto:nimiadas03@gmail.com">nimiadas03@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <div class="contact-text">
+            <p class="contact-info-title">LinkedIn</p>
+            <p><a href="https://www.linkedin.com/in/nimiadas/">LinkedIn Profile</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      
+      <p>Copyright &#169; 2024 Nimia Das. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
