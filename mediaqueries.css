@@ -1,50 +1,5 @@
-/* MEDIA QUERIES */
-
-/* General styling for smaller screens */
-@media only screen and (max-width: 1024px) {
-  section {
-    margin: 0 5rem;
-  }
-
-  #profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    height: 250px;
-    width: 250px;
-  }
-
-  .section__text h1 {
-    font-size: 2.5rem;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  #about .section-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  #skills {
-    margin: 4vh 5rem;
-  }
-
-  #projects {
-    margin: 4vh 5rem;
-  }
-
-  .project-card {
-    width: 90%;
-    margin: 1rem auto;
-  }
-}
-
 @media only screen and (max-width: 768px) {
+  /* Existing styles you already have here */
   nav {
     justify-content: space-between;
   }
@@ -87,9 +42,23 @@
     margin: 4vh 2rem;
   }
 
+  /* Updated styles for project cards to fix visibility on mobile */
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
   .project-card {
-    width: 100%;
-    margin: 1rem 0;
+    width: 90vw;          /* almost full screen width */
+    max-width: 320px;     /* max width to keep card neat */
+    height: auto;         /* allow height to adjust */
+    perspective: none !important;         /* disable 3D perspective */
+  }
+
+  .project-card-inner {
+    transform-style: flat !important;    /* disable 3D transform */
   }
 
   #contact {
@@ -99,59 +68,5 @@
   .contact-info-upper-container {
     width: 100%;
     padding: 0 1rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .section__pic-container {
-    height: 150px;
-    width: 150px;
-  }
-
-  .section__text h1 {
-    font-size: 1.75rem;
-  }
-
-  .section__text__p2 {
-    font-size: 1rem;
-  }
-
-  section {
-    margin: 0 1rem;
-  }
-
-  #profile {
-    height: auto;
-  }
-
-  #skills,
-  #projects,
-  #contact {
-    margin: 4vh 1rem;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 0.75rem;
-  }
-
-  #hamburger-nav {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-  }
-
-  nav {
-    height: 10vh;
-  }
-
-  footer {
-    height: auto;
-    padding: 1rem;
-  }
-
-  footer p {
-    font-size: 0.75rem;
   }
 }
